@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc: .bashrc
+    ~/.zshrc: .zshrc
+    ~/.zsh_history: .zsh_history
+    ~/.bash_history: .bash_history
+    ~/.vimrc: .vimrc
+    ~/.profile: .profile
+    ~/.gitconfig: .gitconfig
+    ~/.barrier.conf: .barrier.conf
+    ~/.barrier-work.conf: .barrier-work.conf
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
